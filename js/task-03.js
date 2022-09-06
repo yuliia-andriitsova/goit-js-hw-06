@@ -15,14 +15,14 @@ const images = [
 
 const galleryPhoto = document.querySelector('.gallery');
 
-images.forEach((photo) => {
-  galleryPhoto.insertAdjacentHTML(
-    'afterbegin',
-    `<li class = "gallery__item"><img class="gallery__img" src = ${photo.url} alt = ${photo.alt}></img></li>`
-  );
-});
+const ImagesItems = images
+  .map((image) => {
+    const img = `<li> <img  class= "gallery__img" src =${image.url} alt=${image.alt} width="300"/> </li>`;
+    return img;
+  })
+  .join('');
 
-console.log(galleryPhoto);
+galleryPhoto.insertAdjacentHTML('afterbegin', ImagesItems);
 
 //Використовуй масив об'єктів images
 //для створення елементів < img >, вкладених в < li >.

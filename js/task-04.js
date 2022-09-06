@@ -8,8 +8,8 @@ const counter = {
   },
 };
 
-const decrementBtn = document.querySelector('.js-decrement');
-const incrementBtn = document.querySelector('.js-increment');
+const decrementBtn = document.querySelector('[data-action="decrement"]');
+const incrementBtn = document.querySelector('[data-action="increment"]');
 const counterValue = document.querySelector('#value');
 
 decrementBtn.addEventListener('click', function () {
