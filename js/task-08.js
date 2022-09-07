@@ -3,7 +3,7 @@ const form = document.querySelector('.login-form');
 form.addEventListener('submit', (event) => {
   event.preventDefault();
   const { email, password } = event.currentTarget.elements;
-  if (!email.value || !password.value) {
+  if (!email.value.trim() || !password.value.trim()) {
     alert('Fill in all form fields, please!');
   }
   const inputData = {
