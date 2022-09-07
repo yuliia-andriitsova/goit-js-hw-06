@@ -7,9 +7,10 @@ const button = document.querySelector('.change-color');
 const colorName = document.querySelector('.color');
 
 button.addEventListener('click', (event) => {
-  bgrColor.style.backgroundColor = getRandomHexColor();
+  const color = getRandomHexColor();
+  bgrColor.style.backgroundColor = color;
   // console.log(getRandomHexColor());
-  colorName.textContent = getRandomHexColor();
+  colorName.textContent = color;
 });
 
 //Напиши скрипт, який змінює кольори фону елемента <body> через
