@@ -11,6 +11,7 @@ const refs = {
   defoultText: document.querySelector('span'),
 };
 
+const defaultText = refs.output.textContent;
 refs.input.addEventListener('input', onInputChange);
 
 function onInputChange(event) {
@@ -19,7 +20,7 @@ function onInputChange(event) {
 
   if (event.currentTarget.value === '')
     // refs.output.textContent = refs.defoultText.textContent;
-    refs.output.textContent = 'Anonymous';
+    refs.output.textContent = defaultText;
 }
 
 // варіант if -якщо є плейсхолдер, виведи анонімус
