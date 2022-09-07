@@ -16,9 +16,9 @@ refs.input.addEventListener('input', onInputChange);
 
 function onInputChange(event) {
   console.log(event.currentTarget.value);
-  refs.output.textContent = event.currentTarget.value;
+  refs.output.textContent = event.currentTarget.value.trim();
 
-  if (event.currentTarget.value === '')
+  if (event.currentTarget.value.trim() === '')
     // refs.output.textContent = refs.defoultText.textContent;
     refs.output.textContent = defaultText;
 }
