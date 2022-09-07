@@ -7,8 +7,8 @@ form.addEventListener('submit', (event) => {
     alert('Fill in all form fields, please!');
   }
   const inputData = {
-    email: `${email.value}`,
-    password: `${password.value}`,
+    email: `${email.value.trim()}`,
+    password: `${password.value.trim()}`,
   };
 
   console.log(inputData);
